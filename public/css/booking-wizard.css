@@ -1,0 +1,370 @@
+:root { --alc-gold: #c5a000; --alc-text: #1a1a1a; --alc-border: #e1e4e8; --alc-bg: #f8fafc; }
+
+.alchemy-booking-wizard { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; max-width: 1200px; margin: auto; padding: 20px; color: #111; position: relative; overflow-x: hidden; }
+
+/* Responsive Heading Mastery */
+.alc-view-heading { font-size: 34px !important; font-weight: 800 !important; line-height: 1.1; margin-bottom: 30px; text-align: left; max-width: 100%; word-wrap: break-word; overflow-wrap: break-word; }
+
+/* Step Containers */
+.alc-step-container { background: #fff; border: 1px solid #eee; padding: 30px; border-radius: 16px; width: 100%; box-sizing: border-box; overflow: hidden; }
+
+/* REFINED: Form Container for Step 3 & 4 - Wide but Shallow */
+.alc-form-container { 
+    background: #fff; 
+    border: 1px solid #eee; 
+    padding: 15px 25px; /* Reduced vertical padding */
+    border-radius: 16px; 
+    width: 100%; 
+    max-width: 100%; 
+    box-sizing: border-box; 
+    overflow: hidden; 
+}
+
+/* Tighten up form field spacing */
+.alc-mb-15 { margin-bottom: 8px !important; } /* Reduced from 15px to 8px */
+
+.alc-form-field { width: 100%; padding: 10px 15px; border: 1px solid #000; border-radius: var(--alc-radius); font-size: 16px; box-sizing: border-box; }
+.alc-textarea { height: 60px; resize: vertical; }
+
+.alc-mt-20 { margin-top: 10px !important; } /* Reduced from 20px to 10px */
+
+/* Modal "X" Close Button */
+.alc-modal-close { position: absolute; right: 20px; top: 15px; font-size: 32px; font-weight: 300; color: #aaa; cursor: pointer; line-height: 1; transition: 0.2s; }
+.alc-modal-close:hover { color: #111; }
+
+/* Scheduler Header: RESTORED ANCIENT STYLING */
+.alc-scheduler-header { 
+    margin-bottom: 30px !important; 
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    text-align: center !important;
+}
+.alc-month-row { 
+    display: flex !important; 
+    align-items: center !important; 
+    justify-content: center !important; 
+    gap: 10px !important; 
+    margin-bottom: 10px !important; 
+    width: auto !important;
+}
+.alc-month-row h2 { 
+    margin: 0 !important; 
+    padding: 0 !important; 
+    font-size: 28px !important; 
+    font-weight: 700 !important; 
+    line-height: 1.2 !important; 
+    display: inline-block !important;
+}
+.alc-datepicker-trigger { 
+    display: flex !important; 
+    align-items: center !important; 
+} 
+.dashicons-calendar-alt { 
+    font-size: 24px !important; 
+    color: var(--alc-gold); 
+    cursor: pointer; 
+    height: 24px !important; 
+    width: 24px !important; 
+    display: flex !important; 
+    align-items: center !important; 
+    justify-content: center !important; 
+    transition: transform 0.2s; 
+    position: relative;
+    top: 1px !important; /* Perfect vertical level */
+} 
+.dashicons-calendar-alt:hover { transform: scale(1.1); }
+
+.alc-today-box { 
+    margin-bottom: 15px !important; 
+    display: flex !important;
+    justify-content: center !important;
+    width: 100% !important;
+}
+.alc-pill-btn { 
+    background: transparent; 
+    border: 1px solid #000; 
+    padding: 5px 12px; 
+    border-radius: 8px; 
+    font-weight: 700; 
+    font-size: 12px; 
+    cursor: pointer; 
+    color: #000;
+    transition: 0.2s;
+}
+
+/* Layout Panels */
+.alc-flex-layout { display: flex; gap: 40px; align-items: flex-start; }
+.alc-main-panel { flex: 1; min-width: 0; max-width: 100%; }
+.alc-summary-sidebar { 
+    width: 350px; 
+    position: sticky; 
+    top: 20px; 
+    margin-top: 90px; /* Nudged up slightly from 100px */
+}
+
+/* Cards & Grid */
+.alchemy-card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 25px; }
+.alchemy-service-card { background: #fff; border: 1px solid #eee; border-radius: 12px; padding: 25px; transition: 0.3s; display: flex; flex-direction: column; }
+.alchemy-service-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-color: var(--alc-gold); }
+
+.card-header-row { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px; }
+.card-header-row h3 { margin: 0; font-size: 20px; color: #111; }
+.card-price { font-weight: 800; font-size: 18px; color: var(--alc-gold); }
+.card-duration { color: #666; font-size: 14px; margin-bottom: 20px; }
+.card-footer { display: flex; gap: 10px; margin-top: auto; }
+
+.btn-book { 
+    flex: 1; 
+    background: #111; 
+    color: #fff; 
+    border: none; 
+    padding: 12px; 
+    border-radius: 8px; 
+    font-weight: 700; 
+    cursor: pointer; 
+    transition: 0.2s; 
+    font-size: 16px !important; /* Standardized to 16px */
+}
+.btn-book:hover { background: var(--alc-gold); }
+
+.alc-btn-primary {
+    background: var(--alc-gold);
+    color: #fff;
+    border: none;
+    padding: 12px 25px !important; 
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s;
+    font-size: 16px !important; /* Standardized to 16px */
+    display: inline-block;
+}
+.alc-btn-primary:hover { filter: brightness(1.1); }
+
+.btn-details:hover, .alc-pill-btn:hover, .time-slot-btn:hover {
+    border-color: var(--alc-gold);
+    color: var(--alc-gold);
+    background: transparent;
+}
+
+.btn-details { 
+    background: none; 
+    border: 1px solid #000; 
+    padding: 12px 15px; 
+    border-radius: 8px; 
+    font-weight: 600; 
+    cursor: pointer; 
+    font-size: 16px !important; 
+    color: #000;
+}
+
+/* Time Grid */
+.alc-time-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 10px; width: 100%; }
+.time-slot-btn { 
+    background: transparent; 
+    padding: 15px; 
+    border-radius: 8px; 
+    text-align: center; 
+    cursor: pointer; 
+    font-weight: 700; 
+    border: 1px solid #000; 
+    color: #000;
+    transition: 0.2s; 
+}
+
+/* Date Scroller Track */
+.alc-scroller-box { display: flex; align-items: center; gap: 15px; padding-bottom: 15px; margin-bottom: 30px; position: relative; border-bottom: 1px solid #f1f1f1; max-width: 100%; box-sizing: border-box; }
+.date-track { 
+    display: flex; 
+    overflow-x: auto; 
+    gap: 20px; 
+    flex: 1; 
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
+    scroll-behavior: smooth; 
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x proximity;
+}
+.date-track::-webkit-scrollbar { display: none; }
+
+.date-day-item { 
+    min-width: 80px; 
+    text-align: center; 
+    cursor: pointer; 
+    padding-bottom: 10px; 
+    border-bottom: 4px solid transparent; 
+    flex-shrink: 0; 
+    transition: 0.2s;
+    scroll-snap-align: start;
+}
+.date-day-item.is-unavailable {
+    opacity: 0.25 !important;
+    cursor: not-allowed !important;
+    filter: grayscale(1) !important;
+    pointer-events: none !important;
+}
+.date-day-item.is-unavailable span,
+.date-day-item.is-unavailable strong {
+    color: #999 !important; /* Force grey color for text inside */
+}
+.date-day-item.selected { border-bottom-color: var(--alc-gold) !important; color: var(--alc-gold) !important; font-weight: 800 !important; }
+.date-day-item span { display: block; font-size: 14px !important; text-transform: uppercase; color: #94a3b8; font-weight: 700; }
+.date-day-item strong { font-size: 26px !important; display: block; margin: 5px 0; }
+
+.scroller-nav-btn { background: #fff; border: 1px solid #e2e8f0; border-radius: 50%; width: 40px; height: 40px; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0; transition: 0.2s; }
+.scroller-nav-btn:hover { background: #f8fafc; border-color: var(--alc-gold); }
+
+/* Payment Step Styling */
+.alc-payment-box { background: #fcfcfc; border: 1px solid #f0f0f0; padding: 20px; border-radius: 12px; margin-bottom: 10px; }
+.alc-payment-box label { display: block; font-size: 12px; font-weight: 700; color: #888; text-transform: uppercase; margin-bottom: 8px; letter-spacing: 0.5px; }
+.alc-payment-box input { width: 100%; padding: 15px; border: 1px solid #ddd; border-radius: 8px; font-size: 16px; transition: border-color 0.2s; }
+.alc-payment-box input:focus { border-color: var(--alc-gold); outline: none; }
+
+/* Summary Sidebar */
+.alc-summary-card { background: #fff; border: 1px solid var(--alc-gold); border-radius: 16px; padding: 30px; position: sticky; top: 20px; }
+.sum-section { margin-bottom: 15px; }
+.sum-section label { font-size: 12px; color: #999; text-transform: uppercase; font-weight: 700; display: block; margin-bottom: 4px; }
+.sum-section p { margin: 0; font-size: 15px; }
+
+/* Back Links & Reset Buttons */
+.alc-back-link, .alc-cancel-btn { background: none; border: none; text-decoration: underline; cursor: pointer; transition: 0.2s; padding: 0; }
+.alc-back-link { color: #666; font-size: 14px; }
+.alc-back-link:hover { color: var(--alc-gold); }
+.alc-cancel-btn { color: #d33; margin-top: 20px; text-align: left; }
+
+/* Form Elements */
+.alc-form-field { width: 100%; padding: 15px; border: 1px solid #000; border-radius: var(--alc-radius); font-size: 16px; box-sizing: border-box; color: #000; }
+.alc-form-field:focus { border-color: #000; outline: none; }
+.alc-textarea { height: 80px; resize: vertical; }
+
+.alc-form-row { margin-bottom: 15px; }
+.alc-form-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 20px; }
+
+/* Error Messages */
+.alc-error-msg { color: #d33; margin-top: 15px; font-size: 14px; }
+
+/* Summary Details */
+.alc-summary-card h3 { margin-top: 0; }
+.alc-summary-total { display: flex; justify-content: space-between; font-size: 18px; font-weight: 700; border-top: 2px solid #f1f1f1; padding-top: 15px; margin-top: 10px; }
+
+/* Modal Styles */
+.alc-modal { position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); align-items: center; justify-content: center; backdrop-filter: blur(4px); display: none; }
+.alc-modal-content { background: #fff; padding: 40px; border-radius: 16px; max-width: 500px; width: 90%; position: relative; box-shadow: 0 20px 50px rgba(0,0,0,0.2); }
+.alc-modal-content h3 { margin-top: 0; font-size: 24px; color: #111; }
+.alc-modal-content p { color: #555; line-height: 1.6; font-size: 16px; margin-bottom: 0; }
+
+/* Utility & Helper Classes */
+.alc-mt-30 { margin-top: 30px !important; }
+.alc-mb-15 { margin-bottom: 8px !important; }
+.alc-mt-20 { margin-top: 10px !important; }
+.alc-pointer { cursor: pointer !important; }
+
+/* Hidden Date Picker (Crucial for centering Month Heading) */
+.alc-hidden-picker { 
+    position: absolute !important; 
+    opacity: 0 !important; 
+    width: 0 !important; 
+    height: 0 !important; 
+    pointer-events: none !important; 
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+}
+
+/* Primary Action Buttons */
+.alc-btn-primary {
+    background: var(--alc-gold) !important;
+    color: #fff !important;
+    border: none !important;
+    padding: 15px 30px !important;
+    font-weight: 700 !important;
+    cursor: pointer !important;
+    display: inline-block;
+    transition: all 0.25s ease !important;
+}
+.alc-btn-primary:hover {
+    filter: brightness(1.1) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Form Footer Alignment */
+.alc-form-footer { 
+    display: flex !important; 
+    justify-content: space-between !important; 
+    align-items: center !important; 
+}
+
+/* Back / Cancel Links */
+.alc-link-btn { 
+    background: none !important; 
+    border: none !important; 
+    text-decoration: underline !important; 
+    cursor: pointer !important; 
+    color: #666 !important; 
+    padding: 0 !important;
+    transition: color 0.2s !important;
+}
+.alc-link-btn:hover { 
+    color: var(--alc-gold) !important; 
+}
+
+/* Summary Box Styling */
+.alc-summary-total { 
+    display: flex !important; 
+    justify-content: space-between !important; 
+    font-size: 18px !important; 
+    font-weight: 700 !important; 
+    border-top: 2px solid #f1f1f1 !important; 
+    padding-top: 15px !important; 
+    margin-top: 10px !important; 
+}
+
+/* Modal Overlay & Transitions */
+.alc-modal-overlay {
+    position: fixed !important;
+    z-index: 1000 !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: rgba(0,0,0,0.6) !important;
+    align-items: center !important;
+    justify-content: center !important;
+    backdrop-filter: blur(4px) !important;
+    display: flex;
+}
+
+/* Service Categories */
+.alc-category-heading {
+    grid-column: 1 / -1;
+    margin: 40px 0 20px 0;
+    font-size: 22px;
+    font-weight: 700;
+    border-bottom: 2px solid var(--alc-head);
+    padding-bottom: 8px;
+    color: #111;
+}
+.alc-category-heading:first-child { margin-top: 0; }
+.alc-category-grid { margin-bottom: 40px; }
+
+/* MOBILE REFINEMENT */
+@media (max-width: 900px) {
+    .alchemy-booking-wizard { padding: 10px; }
+    .alc-flex-layout { flex-direction: column; gap: 10px; }
+    .alc-main-panel { width: 100%; margin: 0; }
+    .alc-summary-sidebar { width: 100%; position: static; order: 2; margin-top: 0 !important; }
+    .alc-view-heading { font-size: 26px !important; margin-bottom: 15px; padding: 0 5px; }
+    
+    .alc-step-container, .alc-form-container { 
+        padding: 20px; 
+        max-width: 100% !important; 
+        width: 100% !important; 
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        border-radius: 12px;
+    }
+}
