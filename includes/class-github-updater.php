@@ -24,7 +24,23 @@ class Alchemy_GitHub_Updater {
         add_action('admin_init', [$this, 'set_plugin_properties']);
         add_filter('site_transient_update_plugins', [$this, 'check_for_update']);
         add_filter('plugins_api', [$this, 'plugin_popup'], 10, 3);
+        add_filter('upgrader_source_selection', [$this, 'fix_source_folder'], 10, 4);
         add_action('upgrader_process_complete', [$this, 'after_install'], 10, 2);
+    }
+
+    public function fix_source_folder($source, $remote_source, $upgrader, $hook_extra) {
+        if (!isset($hook_extra['plugin']) || $hook_extra['plugin'] !== $this->basename) {
+            return $source;
+        }
+
+        $folder_name = dirname($this->basename);
+        $new_source = trailingslashit($remote_source) . $folder_name . '/';
+        
+        if (rename($source, $new_source)) {
+            return $new_source;
+        }
+
+        return $source;
     }
 
     public function set_plugin_properties() {
