@@ -38,6 +38,11 @@ class AlchemyWizard {
         q('.proceed-to-pay-btn')?.addEventListener('click', () => this.proceedToPayment());
         q('.final-pay-btn')?.addEventListener('click', () => this.handleFinalBook());
         q('.cancel-reset-btn')?.addEventListener('click', () => this.cancelAndReset());
+
+        // Navigation for the Date Scroller
+        q('.nav-prev')?.addEventListener('click', () => this.moveScroller(-1));
+        q('.nav-next')?.addEventListener('click', () => this.moveScroller(1));
+        q('.jump-to-today-btn')?.addEventListener('click', () => this.jumpToToday());
         
         // Restore Back Button Functionality
         this.container.querySelectorAll('.back-to-step-1, .back-to-services').forEach(btn => btn.onclick = () => this.goToStep(1));
@@ -106,6 +111,14 @@ class AlchemyWizard {
         this.booking.id = id; this.booking.title = title; this.booking.price = price; this.booking.duration = duration;
         this.updateSummary();
         this.goToStep(2);
+    }
+
+    moveScroller(dir) {
+        const track = this.container.querySelector('.date-track');
+        if (!track) return;
+        const firstItem = track.querySelector('.date-day-item');
+        const step = firstItem ? (firstItem.offsetWidth + 20) : 300;
+        track.scrollBy({ left: dir * step, behavior: 'smooth' });
     }
 
     goToStep(step) {
