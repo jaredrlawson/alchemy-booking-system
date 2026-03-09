@@ -3,6 +3,8 @@
  * Plugin Name: The Abstract Alchemist Booking
  * Description: Precision scheduler with Admin Availability Calendar.
  * Version: 2.1.4-beta.1
+ * Author: Jared Я Lawson
+ * Author URI: https://github.com/jaredrlawson
  * Plugin URI: https://github.com/jaredrlawson/alchemy-booking-system
  * GitHub Plugin URI: https://github.com/jaredrlawson/alchemy-booking-system
  */

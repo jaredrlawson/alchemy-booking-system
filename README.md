@@ -34,4 +34,4 @@ Access the **Alchemy Ledger** from your WordPress admin bar to:
 - **Optimization:** Dynamic CSS and localized JS ensure minimal impact on site loading times.
 
 ---
-Developed by **Jared Lawson** for *The Abstract Alchemist*.
+Developed by **Jared Я Lawson** for *The Abstract Alchemist*.
