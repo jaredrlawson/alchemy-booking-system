@@ -20,6 +20,5 @@ QWEN.md
 alchemy-booking
 
 # Plugin Specific
-assets/
 /assets/stripe-php/vendor/
 aider
